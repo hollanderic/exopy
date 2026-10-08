@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+import os
+import sys
+
+# Add py directory to sys.path so exotherm package can be imported directly
+py_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if py_dir not in sys.path:
+    sys.path.insert(0, py_dir)
+
+from exopy.cli import main
+
+if __name__ == "__main__":
+    sys.exit(main())
